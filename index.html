@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+  <div class="contenedor">
+    <header class="container">
+      <div class="cc-front">
+        <div class="logo">
+          <img src="/images/card-logo.svg" alt="">
+        </div>
+        <div class="card-number">
+          <p>0000 0000 0000 0000</p>
+        </div>
+        <div class="name">
+          <p>JANE APPLESEED</p>
+          <P>00/00</P>
+        </div>
+      </div>
+      <div class="cc-back">
+        <p>000</p>
+      </div>
+    </header>
+    <main class="container">
+      <form>
+        <label class="form-item" for="name">CARDHOLDER NAME</label>
+        <input class="form-item" type="text" name="name" id="name" placeholder="e.g Jane Appleseed">
+        <label class="form-item" for="card-number">CARD NUMBER</label>
+        <input class="form-item" type="number" max="9999999999999999" step="4" name="card-number" id="card-number"
+          placeholder="e.g 1234 5678 9123 0000">
+        <p class="number-error">Wrong format, numbers only</p>
+        <div class="cont-datecvc">
+          <div class="date-cont">
+            <label class="form-item" for="date">EXP. DATE (MM/YY)</label>
+            <input class="form-item day" type="number" name="day" id="day">
+            <input class=" form-item month" type="number" name="month" id="month">
+            <p>Can't be blank</p>
+          </div>
+          <div class="cvc-cont">
+            <label class="form-item" for="cvc">CVC</label>
+            <input class="form-item" type="number" name="cvc" id="">
+            <p>Can't be blank</p>
+          </div>
+        </div>
+        <button class="form-item btn" type="submit">Confirm</button>
+      </form>
+    </main>
+  </div>
+
+
+</body>
+
+</html>
+
+<!-- 0000 0000 0000 0000
+Jane Appleseed
+00/00
+
+000
+
+Cardholder Name
+e.g. Jane Appleseed
+
+Card Number
+e.g. 1234 5678 9123 0000
+
+Exp. Date (MM/YY)
+MM
+YY
+
+CVC
+e.g. 123
+
+Confirm -->
+
+<!-- Completed state start -->
+
+<!-- Thank you!
+We've added your card details
+Continue -->

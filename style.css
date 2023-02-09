@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+    /* ### Primary */
+    --gradient: linear-gradient(to right, hsl(249, 99%, 64%) 0%, hsl(278, 94%, 30%) 100%);
+    --red: hsl(0, 100%, 66%);
+
+    /* ### Neutral */
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Space Grotesk',
+        sans-serif;
+    min-width: 375px;
+    background-color: var(--white);
+}
+
+
+
+.container {
+    /* border: 2px solid red; */
+    margin: 0 auto;
+    min-width: 375px;
+    max-width: 600px;
+    padding: 0 10px;
+    /* overflow: hidden; */
+}
+
+
+
+.contenedor {
+    width: 99vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 99vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+img {
+    max-width: 100%;
+}
+
+header {
+    position: relative;
+    background-image: url('./images/bg-main-mobile.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 32vh;
+
+}
+
+
+
+header .cc-front {
+    z-index: 10000;
+    position: absolute;
+    top: 155px;
+    right: 21%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(./images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 288px;
+    height: 158px;
+    padding: 20px;
+    color: var(--white);
+    font-size: 16px;
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    box-shadow: 4px 3px 25px -10px rgba(0, 0, 0, 1);
+
+
+}
+
+
+
+header .cc-front .logo {
+    width: 60px;
+}
+
+header .cc-front .card-number {
+    margin-top: 15px;
+}
+
+header .cc-front .name {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .cc-back {
+    z-index: 900;
+    position: absolute;
+    left: 19%;
+    top: 40px;
+    background-image: url(./images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 295px;
+    height: 170px;
+    border-radius: 10px;
+    box-shadow: 4px 3px 25px -10px rgba(0, 0, 0, 1);
+}
+
+
+
+header .cc-back p {
+    position: relative;
+    left: 81%;
+    top: 45%;
+    font-size: 14px;
+}
+
+/* MAIN */
+main {
+    height: 60vh;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+    font-size: 14px;
+    /* border: 1px solid red; */
+}
+
+
+form .number-error {
+    margin-bottom: 15px;
+}
+
+/* asd */
+main form .form-item {
+    /* padding: 10px 0; */
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+main form input,
+main form button {
+    padding: 20px 12px;
+}
+
+main form .cont-datecvc {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    /* border: 1px solid red; */
+}
+
+
+main form .cont-datecvc .date-cont {
+    /* border: 1px solid red; */
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+main form .cont-datecvc .date-cont label {
+    width: 100%;
+
+}
+
+main form .cont-datecvc .date-cont input {
+    width: 40%;
+    max-width: 47%;
+}
+
+main form .cont-datecvc .date-cont .month {
+    margin-left: 15px;
+}
+
+main form .cont-datecvc .cvc-cont {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+main form button {
+    margin-top: 25px;
+    border: none;
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+}
+
+@media screen and (min-width: 1051px) {
+    .contenedor {
+        flex-direction: row;
+
+    }
+
+    header {
+        background-image: url('./images/bg-main-desktop.png');
+        height: auto;
+        width: 500px;
+    }
+
+    header .cc-front {
+        right: -10%;
+        top: 170px;
+        width: 355px;
+        height: 195px;
+        font-size: 20px;
+    }
+
+    header .cc-back {
+        left: 35%;
+        top: 430px;
+        width: 355px;
+        height: 195px;
+        font-size: 20px;
+    }
+
+    main form {
+        height: 99vh;
+        justify-content: center;
+        margin-left: 70px;
+        margin-top: 0;
+        width: 70%;
+        padding: 0 auto;
+    }
+
+    main form input,
+    main form button {
+        padding: 15px 5px;
+    }
+}
