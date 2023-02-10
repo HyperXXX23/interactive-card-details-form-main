@@ -42,10 +42,10 @@ body {
 
 
 .contenedor {
-    width: 99vw;
+    width: 100vw;
     max-width: 1200px;
     margin: 0 auto;
-    height: 99vh;
+    height: 100%;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -214,6 +214,7 @@ main form button {
 @media screen and (min-width: 1051px) {
     .contenedor {
         flex-direction: row;
+        height: 100vh;
 
     }
 
