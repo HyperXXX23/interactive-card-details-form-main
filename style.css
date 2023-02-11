@@ -126,14 +126,15 @@ header .cc-back {
 
 header .cc-back p {
     position: relative;
-    left: 81%;
-    top: 45%;
+    left: 80%;
+    top: 43%;
     font-size: 14px;
 }
 
 /* MAIN */
 main {
-    height: 60vh;
+    position: relative;
+    height: 68vh;
     position: relative;
     z-index: 1;
     width: 100%;
@@ -142,7 +143,7 @@ main {
 main form {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 110px;
     width: 100%;
     height: auto;
     padding: 0 20px;
@@ -150,9 +151,14 @@ main form {
     /* border: 1px solid red; */
 }
 
+main form label {
+    cursor: pointer;
+}
 
-form .number-error {
-    margin-bottom: 15px;
+main form .error {
+    display: none;
+    color: var(--red);
+    margin-bottom: 20px;
 }
 
 /* asd */
@@ -165,6 +171,17 @@ main form .form-item {
 main form input,
 main form button {
     padding: 20px 12px;
+}
+
+main form input {
+    background-color: var(--white);
+    border: 2px solid var(--light-grayish-violet);
+    transition: all .5s ease-in-out;
+}
+
+main form input:focus {
+    border: 2px solid var(--dark-grayish-violet);
+    outline: none;
 }
 
 main form .cont-datecvc {
@@ -211,39 +228,65 @@ main form button {
     color: var(--white);
 }
 
+/* STATE MOD */
+main form .i-wrong {
+    background-color: var(--white);
+    border: 2px solid var(--red);
+    transition: all .5s ease-in-out;
+}
+
+main form .p-wrong {
+    display: block;
+}
+
+
+/* MEDIAQUERIES */
+
 @media screen and (min-width: 1051px) {
     .contenedor {
         flex-direction: row;
         height: 100vh;
-
     }
 
     header {
         background-image: url('./images/bg-main-desktop.png');
-        height: auto;
+        height: 100vh;
         width: 500px;
     }
 
     header .cc-front {
-        right: -10%;
-        top: 170px;
+        right: -15%;
+        top: 180px;
         width: 355px;
         height: 195px;
-        font-size: 20px;
+        font-size: 22px;
+    }
+
+    header .cc-front .card-n {
+        font-size: 24px;
+        letter-spacing: 2px;
     }
 
     header .cc-back {
-        left: 35%;
-        top: 430px;
+        left: 54%;
+        top: 450px;
         width: 355px;
         height: 195px;
         font-size: 20px;
     }
 
+    header .cc-back p {
+        left: 81%;
+        top: 45%;
+        font-size: 16px;
+    }
+
     main form {
+        position: relative;
+        top: -50px;
         height: 99vh;
         justify-content: center;
-        margin-left: 70px;
+        margin-left: 150px;
         margin-top: 0;
         width: 70%;
         padding: 0 auto;
