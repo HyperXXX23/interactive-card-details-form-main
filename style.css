@@ -184,6 +184,11 @@ main form .cvc-error {
     margin-bottom: 20px;
 }
 
+main form .form-error {
+    display: none;
+    color: var(--red);
+}
+
 /* asd */
 main form .form-item {
     /* padding: 10px 0; */
