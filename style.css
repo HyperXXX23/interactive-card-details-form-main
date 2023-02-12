@@ -22,6 +22,7 @@
 }
 
 body {
+    /* border: 1px solid red; */
     font-family: 'Space Grotesk',
         sans-serif;
     min-width: 375px;
@@ -42,6 +43,7 @@ body {
 
 
 .contenedor {
+    /* border: 1px solid red; */
     width: 100vw;
     max-width: 1200px;
     margin: 0 auto;
@@ -105,7 +107,13 @@ header .cc-front .card-number {
 
 header .cc-front .name {
     display: flex;
+    font-size: 15px;
     justify-content: space-between;
+}
+
+header .cc-front .card-date {
+    font-size: 15px;
+
 }
 
 header .cc-back {
@@ -155,8 +163,23 @@ main form label {
     cursor: pointer;
 }
 
-main form .error {
+main form .number-error {
     display: none;
+    color: var(--red);
+    margin-bottom: 20px;
+}
+
+main form .date-error {
+    /* display: none; */
+    opacity: 0;
+    color: var(--red);
+    margin-bottom: 20px;
+}
+
+
+main form .cvc-error {
+    /* display: none; */
+    opacity: 0;
     color: var(--red);
     margin-bottom: 20px;
 }
@@ -176,7 +199,7 @@ main form button {
 main form input {
     background-color: var(--white);
     border: 2px solid var(--light-grayish-violet);
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 main form input:focus {
@@ -197,6 +220,7 @@ main form .cont-datecvc .date-cont {
     width: 50%;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 
@@ -226,18 +250,9 @@ main form button {
     border: none;
     background-color: var(--very-dark-violet);
     color: var(--white);
+    cursor: pointer;
 }
 
-/* STATE MOD */
-main form .i-wrong {
-    background-color: var(--white);
-    border: 2px solid var(--red);
-    transition: all .5s ease-in-out;
-}
-
-main form .p-wrong {
-    display: block;
-}
 
 
 /* MEDIAQUERIES */
@@ -249,9 +264,12 @@ main form .p-wrong {
     }
 
     header {
+        position: relative;
+        right: 22px;
         background-image: url('./images/bg-main-desktop.png');
         height: 100vh;
         width: 500px;
+        /* border: 1px solid red; */
     }
 
     header .cc-front {
@@ -259,12 +277,21 @@ main form .p-wrong {
         top: 180px;
         width: 355px;
         height: 195px;
-        font-size: 22px;
+        font-size: 20px;
     }
 
     header .cc-front .card-n {
         font-size: 24px;
         letter-spacing: 2px;
+    }
+
+    header .cc-front .card-name {
+        font-size: 21px;
+    }
+
+    header .cc-front .card-date {
+        padding-top: 3px;
+        font-size: 18px;
     }
 
     header .cc-back {
@@ -296,4 +323,19 @@ main form .p-wrong {
     main form button {
         padding: 15px 5px;
     }
+}
+
+/* STATE MOD */
+.i-wrong {
+    background-color: var(--white);
+    border: 2px solid var(--red);
+    transition: all .3s ease-in-out;
+}
+
+.p-wrong {
+    display: block !important;
+}
+
+.p1-wrong {
+    opacity: 1 !important;
 }

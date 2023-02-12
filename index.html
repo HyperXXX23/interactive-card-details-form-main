@@ -22,8 +22,8 @@
           <p class="card-n">0000 0000 0000 0000</p>
         </div>
         <div class="name">
-          <p>JANE APPLESEED</p>
-          <P>00/00</P>
+          <p class="card-name">JANE APPLESEED</p>
+          <p class="card-date"><span class="span-day">00</span>/<span class="span-month">00</span> </p>
         </div>
       </div>
       <div class="cc-back">
@@ -31,24 +31,23 @@
       </div>
     </header>
     <main class="container">
-      <form>
+      <form id="formulario">
         <label class="form-item" for="name">CARDHOLDER NAME</label>
         <input class="form-item" type="text" name="name" id="name" placeholder="e.g Jane Appleseed">
         <label class="form-item" for="card-number">CARD NUMBER</label>
-        <input class="form-item" type="number" max="9999999999999999" step="4" name="card-number" id="card-number"
-          placeholder="e.g 1234 5678 9123 0000">
-        <p class="number-error error">Wrong format, numbers only</p>
+        <input class="form-item" type="text" name="card-number" id="card-number" placeholder="e.g 1234 5678 9123 0000">
+        <p class="number-error error">Wrong format, numbers and spaces only</p>
         <div class="cont-datecvc">
           <div class="date-cont">
             <label class="form-item" for="day">EXP. DATE (MM/YY)</label>
             <input class="form-item day" min="1" max="31" type="number" name="day" id="day">
             <input class=" form-item month" type="number" min="1" max="12" name="month" id="month">
-            <p class="error">Can't be blank</p>
+            <p class="date-error ">Can't be blank</p>
           </div>
           <div class="cvc-cont">
             <label class="form-item" for="cvc">CVC</label>
-            <input class="form-item" type="number" name="cvc" id="">
-            <p class="error">Can't be blank</p>
+            <input class="form-item" type="number" name="cvc" id="cvc">
+            <p class="cvc-error">Can't be blank</p>
           </div>
         </div>
         <button class="form-item btn" type="submit">Confirm</button>
@@ -56,7 +55,7 @@
     </main>
   </div>
 
-
+  <script src="app.js"></script>
 </body>
 
 </html>
