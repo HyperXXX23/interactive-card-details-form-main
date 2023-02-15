@@ -93,6 +93,7 @@ form.addEventListener('submit', (e) => {
     if (fields.name && fields.card && fields.days && fields.month && fields.cvc) {
         form.reset();
         document.querySelector('main form .form-error').classList.remove('p-wrong');
+        document.querySelector('main form .ready').classList.add('p1-wrong');
     } else {
         document.querySelector('main form .form-error').classList.add('p-wrong');
     }
